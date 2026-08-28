@@ -8,8 +8,6 @@ The project follows the full analytics workflow: raw data validation, cleaning, 
 **Data:** NBP BaRN · GUS BDL  
 **Coverage:** prices 2006Q3–2026Q2 · affordability 2007–2025 · full-year housing supply 2005–2025 · H1 2026 update
 
-[Open the Google Sheets report](https://docs.google.com/spreadsheets/d/1gHU5Ot4knVZaT6NV9FBnYy82w7Io19RJ3hKTsw2v7E8/edit?usp=sharing)
-
 ## Dashboard
 
 <img src="images/Housing_Market_Overview.png" width="1000"/>
@@ -187,6 +185,8 @@ Final clean and reporting tables contain **zero duplicate business keys**.
 
 ## Google Sheets report
 
+ [Open the Google Sheets report](https://docs.google.com/spreadsheets/d/158lCBVGkFTjF_F3A75yuvtiQ_b_EcPNo/edit?usp=sharing&ouid=113573388264868707337&rtpof=true&sd=true)
+
 Power BI is the main tool for interactive exploration. Google Sheets serves a different purpose: it provides a lightweight browser-based summary that can be opened without Power BI and makes the city-level numbers, definitions and current H1 supply update easy to inspect.
 
 <img src="images/Executive_Summary_Raport.png" width="1000"/>
@@ -204,8 +204,6 @@ The workbook has three visible report tabs:
 - **Methodology:** metric definitions, reference periods and caveats
 
 Hidden `src_*` tabs preserve the link to the Python reporting tables. Spreadsheet formulas and the H1 findings were reconciled against the exported CSVs, and the final working Google Sheet was checked for formula errors, header filters and dynamic conditional formatting.
-
-## [Open the Google Sheets report](https://docs.google.com/spreadsheets/d/158lCBVGkFTjF_F3A75yuvtiQ_b_EcPNo/edit?usp=sharing&ouid=113573388264868707337&rtpof=true&sd=true)
 
 ## Methodology notes
 
