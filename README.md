@@ -8,8 +8,6 @@ The project follows the full analytics workflow: raw data validation, cleaning, 
 **Data:** NBP BaRN · GUS BDL  
 **Coverage:** prices 2006Q3–2026Q2 · affordability 2007–2025 · full-year housing supply 2005–2025 · H1 2026 update
 
-[Open the Google Sheets report](https://docs.google.com/spreadsheets/d/1gHU5Ot4knVZaT6NV9FBnYy82w7Io19RJ3hKTsw2v7E8/edit?usp=sharing)
-
 ## Dashboard
 
 <img src="images/Housing_Market_Overview.png" width="1000"/>
