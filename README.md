@@ -4,7 +4,7 @@ Housing market analysis for **17 Polish cities**, built with public data from **
 
 The project follows the full analytics workflow: raw data validation, cleaning, metric design, exploratory analysis, reporting tables, Power BI and a Google Sheets report.
 
-**Stack:** Python · pandas · NumPy · Matplotlib · Power BI · DAX · Google Sheets  
+**Stack:** Python · Pandas · NumPy · Matplotlib · Power BI · DAX · Google Sheets  
 **Data:** NBP BaRN · GUS BDL  
 **Coverage:** prices 2006Q3–2026Q2 · affordability 2007–2025 · full-year housing supply 2005–2025 · H1 2026 update
 
