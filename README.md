@@ -45,7 +45,7 @@ The notebooks are organized around seven practical questions:
 6. Which cities look favourable across individual buyer metrics?
 7. Does average price growth agree with quality-adjusted price growth?
 
-The project uses separate metrics rather than one composite city score. A three-variable **Pareto check** is used to identify cities with no clearly better alternative across affordability, completed supply and recent secondary-market price growth.
+The project uses separate metrics rather than one composite city score. A three-variable **Pareto check** is used to identify cities with no clearly better alternative across affordability, completed supply and recent secondary-market price growth. The Pareto inputs use each metric's latest valid period, so this is a latest-available comparison rather than a strict same-date cross-section.
 
 ## Data pipeline
 
@@ -189,11 +189,11 @@ Final clean and reporting tables contain **zero duplicate business keys**.
 
 Power BI is the main tool for interactive exploration. Google Sheets serves a different purpose: it provides a lightweight browser-based summary that can be opened without Power BI and makes the city-level numbers, definitions and current H1 supply update easy to inspect.
 
-<img src="images/Executive_Summary_Raport.png" width="1000"/>
+<img src="images/Executive_Summary_Report.png" width="1000"/>
 
 **Executive Summary** contains four reference KPIs and a rule-based H1 2026 vs H1 2025 housing completions update.
 
-<img src="images/City_Comparison_Raport.png" width="1000"/>
+<img src="images/City_Comparison_Report.png" width="1000"/>
 
 **City Comparison** puts all 17 cities in one table across prices, primary premium, affordability, recent price growth and housing supply. Conditional formatting is interpreted within each metric and does not create an overall city ranking.
 
@@ -226,7 +226,7 @@ Polish-Cities-Market-Analysis/
 │   └── reporting/
 ├── images/
 ├── notebooks/
-│   ├── 00_validation_cleaning_commented.ipynb
+│   ├── 00_validation_cleaning.ipynb
 │   ├── 01_market_questions.ipynb
 │   └── 02_reporting_exports.ipynb
 ├── powerbi/
@@ -254,7 +254,14 @@ Notebook 00 builds the processed layer, notebook 01 runs the market analysis, an
 
 ## Sources
 
-- **Narodowy Bank Polski BaRN**: housing prices and hedonic indices
-- **GUS Bank Danych Lokalnych**: wages, market activity, housing supply and population
+- **Narodowy Bank Polski (BaRN)**: housing prices and hedonic indices from the `ceny_mieszkan.xlsx` workbook snapshot stored in `data/raw/nbp/`. Notebook 00 validates this exact snapshot with SHA-256 before processing.
+- **GUS Bank Danych Lokalnych (BDL)**:
+  - `WYNA_2497` — average gross monthly wages
+  - `RYNE_3777` — housing-market transactions
+  - `RYNE_3789` — sold dwellings
+  - `RYNE_3791` — sold residential area
+  - `PRZE_3822` — dwellings started
+  - `PRZE_3823` — dwellings completed
+  - `LUDN_2914` — population
 
 Raw source snapshots are stored in the repository so the analysis can be reproduced against the same inputs.
